@@ -10,18 +10,31 @@ import Foundation
 import UIKit
 
 protocol NibNaming {
-    var nibName: String { get }
+    static var nibName: String { get }
 }
 
 protocol NibLoadable: NibNaming {
     func loadNibContent()
 }
 
-extension NibLoadable where Self: UIView {
-    
-    var nibName: String {
+protocol Reuseable: NibNaming {
+    static var reuseIdentifier: String { get }
+}
+
+extension NibNaming {
+    static var nibName: String {
         String(describing: Self.self)
     }
+}
+
+extension Reuseable {
+    
+    static var reuseIdentifier: String {
+        nibName
+    }
+}
+
+extension NibLoadable where Self: UIView {
     
     func loadNibContent() {
         guard let view = loadViewFromNib() else { return }
@@ -31,7 +44,7 @@ extension NibLoadable where Self: UIView {
     
     private func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
+        let nib = UINib(nibName: Self.nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
 }

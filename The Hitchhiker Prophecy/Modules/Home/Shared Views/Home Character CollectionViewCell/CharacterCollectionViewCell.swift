@@ -8,18 +8,23 @@
 
 import UIKit
 
-class HomeCharacterCollectionViewCell: UICollectionViewCell {
+class CharacterCollectionViewCell: UICollectionViewCell, Reuseable {
     // MARK: - Outlets
-    @IBOutlet private weak var characterNameLabel: UILabel!
-    @IBOutlet private weak var characterImageView: UIImageView!
+
+    @IBOutlet var characterNameLabel: UILabel!
+    @IBOutlet var characterImageView: UIImageView!
     
     // MARK: - Life Cycle
+    
     override func awakeFromNib() {
+        super.awakeFromNib()
+        
         characterImageView.layer.cornerRadius = 8
         characterImageView.clipsToBounds = true
     }
     
     // MARK: - Setup
+    
     func configure(with viewModel: HomeScene.Search.ViewModel) {
         characterNameLabel.text = viewModel.name
         if let url = URL(string: viewModel.imageUrl) {
