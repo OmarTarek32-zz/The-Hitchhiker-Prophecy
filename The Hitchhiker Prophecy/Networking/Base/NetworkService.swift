@@ -13,7 +13,7 @@ public class NetworkService: NSObject {
     let client: SessionManager
 
     override public init() {
-        client = SessionManager()        
+        client = SessionManager.default
         super.init()
     }
 }
