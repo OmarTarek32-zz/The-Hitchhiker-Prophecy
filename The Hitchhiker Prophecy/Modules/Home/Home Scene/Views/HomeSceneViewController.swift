@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeSceneViewController: UIViewController {
+class HomeSceneViewController: UIViewController, LoadingViewCapable {
     
     // MARK: - IBOutlets
     
@@ -27,16 +27,15 @@ class HomeSceneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoading()
         interactor?.fetchCharacters()
     }
     
-    @IBAction func changeLayoutButtonTapped(_ sender: UIButton) {
-        charactersListView.switchLayout()
-    }
 }
 
 extension HomeSceneViewController: HomeSceneDisplayView {
     func didFetchCharacters(viewModel: [HomeScene.Search.ViewModel]) {
+        hideLoading()
         charactersListView.configure(viewModel)
     }
     
