@@ -20,8 +20,10 @@ extension LoadingViewCapable where Self: UIViewController {
         let loader = LoadingView.shared
         view.addSubview(loader)
         view.bringSubviewToFront(loader)
+        loader.translatesAutoresizingMaskIntoConstraints = false
         loader.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         loader.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
+        
         loader.activityIndicator.startAnimating()
     }
     
@@ -37,6 +39,7 @@ class LoadingView: UIView {
         let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
         activityIndicator.hidesWhenStopped = true
         activityIndicator.tintColor = .white
+        activityIndicator.color = .white
         return activityIndicator
     }()
     
