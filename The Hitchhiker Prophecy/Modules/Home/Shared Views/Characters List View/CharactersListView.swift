@@ -17,12 +17,12 @@ class CharactersListView: UIView, NibLoadable {
     // MARK: - Nested Type
     
     enum Layout {
-        case grid(frame: CGRect)
-        case list(frame: CGRect)
+        case gallery
+        case list
     }
     
     // MARK: - IBOutlets
-    
+    @IBOutlet weak var changeLayoutButton: UIButton!
     @IBOutlet weak var charactersCollectionView: UICollectionView! {
         didSet{
             charactersCollectionView.delegate = self
@@ -38,7 +38,7 @@ class CharactersListView: UIView, NibLoadable {
     
     private var characters: [HomeScene.Search.ViewModel] = []
         
-    private lazy var currentLayout = Layout.list(frame: frame)
+    private var currentLayout = Layout.list
     
     // MARK: - Life Cycle Functions
     
@@ -46,21 +46,28 @@ class CharactersListView: UIView, NibLoadable {
         super.init(coder: aDecoder)
         
         loadNibContent()
+        
     }
     
     // MARK: - Functions
-    
+
     func configure(_ data: [HomeScene.Search.ViewModel]) {
         characters = data
         charactersCollectionView.reloadData()
     }
     
-    func switchLayout() {
+    private func switchLayout() {
         currentLayout.toggle()
-        charactersCollectionView.startInteractiveTransition(to: currentLayout.collectionViewFlowLayout, completion: nil)
+        changeLayoutButton.isEnabled = false
+        charactersCollectionView.startInteractiveTransition(to: currentLayout.collectionViewFlowLayout) { [weak changeLayoutButton] _, _ in
+            changeLayoutButton?.isEnabled = true
+        }
         charactersCollectionView.finishInteractiveTransition()
     }
     
+    @IBAction func changeLayoutButtonTapped(_ sender: UIButton) {
+        switchLayout()
+    }
 }
 
 extension CharactersListView: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -79,25 +86,37 @@ extension CharactersListView: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
+extension CharactersListView: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        switch currentLayout {
+        case .list:
+            return  CGSize(width: frame.width - (frame.width * 0.05), height: 200)
+            
+        case .gallery:
+            return CGSize(width: frame.width - (frame.width * 0.2) , height: frame.height*0.85)
+        }
+    }
+}
+
 extension CharactersListView.Layout {
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout {
         switch self {
-        case .grid(let frame):
+        case .gallery:
             let collectionFlowLayout = UICollectionViewFlowLayout()
-            collectionFlowLayout.scrollDirection = .vertical
+            collectionFlowLayout.scrollDirection = .horizontal
             collectionFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-            collectionFlowLayout.itemSize = CGSize(width: (frame.width - 80) / 2 , height: frame.height*0.16)
             collectionFlowLayout.minimumInteritemSpacing = 20
             collectionFlowLayout.minimumLineSpacing = 20
             return collectionFlowLayout
             
-        case .list(let frame):
+        case .list:
             let collectionFlowLayout = UICollectionViewFlowLayout()
             collectionFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-            collectionFlowLayout.itemSize = CGSize(width: frame.width, height: 300)
-            collectionFlowLayout.minimumInteritemSpacing = 0
-            collectionFlowLayout.minimumLineSpacing = 0
+            collectionFlowLayout.minimumInteritemSpacing = 10
+            collectionFlowLayout.minimumLineSpacing = 10
             collectionFlowLayout.scrollDirection = .vertical
             return collectionFlowLayout
         }
@@ -105,10 +124,11 @@ extension CharactersListView.Layout {
     
     mutating func toggle() {
         switch self {
-        case .grid(let frame):
-            self = .list(frame: frame)
-        case .list(let frame):
-            self = .grid(frame: frame)
+        case .gallery:
+            self = .list
+        case .list:
+            self = .gallery
         }
     }
+
 }

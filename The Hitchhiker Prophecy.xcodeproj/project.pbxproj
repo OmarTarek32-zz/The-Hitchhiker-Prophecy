@@ -33,6 +33,7 @@
 		580AAD3D2609D5010018C6F8 /* ReusableUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */; };
 		580AAD412609E6B50018C6F8 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD402609E6B50018C6F8 /* UICollectionViewExtension.swift */; };
 		580AAD5A260A78A80018C6F8 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7AE4E249803460053EF25 /* CharacterCollectionViewCell.xib */; };
+		580AAD65260AA8F30018C6F8 /* LoadingViewCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD64260AA8F20018C6F8 /* LoadingViewCapable.swift */; };
 		581B9612260948870007ED8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B9611260948870007ED8B /* StringExtension.swift */; };
 		581B961C2609CFA90007ED8B /* CharactersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581B961B2609CFA90007ED8B /* CharactersListView.xib */; };
 		581B96202609CFBB0007ED8B /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B961F2609CFBB0007ED8B /* CharactersListView.swift */; };
@@ -94,6 +95,7 @@
 		26DE673059370D3D001872E6 /* Pods_The_Hitchhiker_Prophecy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Hitchhiker_Prophecy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableUIViewExtension.swift; sourceTree = "<group>"; };
 		580AAD402609E6B50018C6F8 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		580AAD64260AA8F20018C6F8 /* LoadingViewCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewCapable.swift; sourceTree = "<group>"; };
 		581B9611260948870007ED8B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		581B961B2609CFA90007ED8B /* CharactersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListView.xib; sourceTree = "<group>"; };
 		581B961F2609CFBB0007ED8B /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				581B9611260948870007ED8B /* StringExtension.swift */,
 				580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */,
 				580AAD402609E6B50018C6F8 /* UICollectionViewExtension.swift */,
+				580AAD64260AA8F20018C6F8 /* LoadingViewCapable.swift */,
 			);
 			path = "Foundation Extension";
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580AAD65260AA8F30018C6F8 /* LoadingViewCapable.swift in Sources */,
 				76C7AE482497B8F20053EF25 /* CharacterDetailsSceneInteractor.swift in Sources */,
 				76C7AE4F249803460053EF25 /* CharacterCollectionViewCell.swift in Sources */,
 				A9F01E9724E1ED9B0034ABB9 /* AppLibraryManager.swift in Sources */,
