@@ -10,19 +10,30 @@ import UIKit
 
 class HomeSceneViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var charactersListView: CharactersListView!
+    
+    // MARK: - Dependencies
+    
     var interactor: HomeSceneBusinessLogic?
     var router: HomeSceneRoutingLogic?
     
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor?.fetchCharacters()
+    }
+    
+    @IBAction func changeLayoutButtonTapped(_ sender: UIButton) {
+        charactersListView.switchLayout()
     }
 }
 
 extension HomeSceneViewController: HomeSceneDisplayView {
     func didFetchCharacters(viewModel: [HomeScene.Search.ViewModel]) {
-        // TODO: Implement
+        charactersListView.configure(viewModel)
     }
     
     func failedToFetchCharacters(error: Error) {
