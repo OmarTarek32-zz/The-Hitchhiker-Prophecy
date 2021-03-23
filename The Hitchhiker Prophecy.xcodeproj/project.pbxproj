@@ -30,7 +30,10 @@
 		01D65F7A24913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F7924913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift */; };
 		01D65F8224913B760082F8FF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8124913B760082F8FF /* SessionManager.swift */; };
 		01D65F8424913BD40082F8FF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8324913BD40082F8FF /* Request.swift */; };
+		580AAD3D2609D5010018C6F8 /* ReusableUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */; };
 		581B9612260948870007ED8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B9611260948870007ED8B /* StringExtension.swift */; };
+		581B961C2609CFA90007ED8B /* CharactersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581B961B2609CFA90007ED8B /* CharactersListView.xib */; };
+		581B96202609CFBB0007ED8B /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B961F2609CFBB0007ED8B /* CharactersListView.swift */; };
 		76A9C3C224A40FB4001E707F /* HomeSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A9C3C124A40FB4001E707F /* HomeSceneViewController.xib */; };
 		76C7AE382497AD910053EF25 /* CharacterDetailsSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7AE362497AD910053EF25 /* CharacterDetailsSceneViewController.swift */; };
 		76C7AE392497AD920053EF25 /* CharacterDetailsSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7AE372497AD910053EF25 /* CharacterDetailsSceneViewController.xib */; };
@@ -87,7 +90,10 @@
 		01D65F8324913BD40082F8FF /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		15699D3B559570DF31F0A14D /* Pods-The Hitchhiker Prophecy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Hitchhiker Prophecy.debug.xcconfig"; path = "Target Support Files/Pods-The Hitchhiker Prophecy/Pods-The Hitchhiker Prophecy.debug.xcconfig"; sourceTree = "<group>"; };
 		26DE673059370D3D001872E6 /* Pods_The_Hitchhiker_Prophecy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Hitchhiker_Prophecy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableUIViewExtension.swift; sourceTree = "<group>"; };
 		581B9611260948870007ED8B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		581B961B2609CFA90007ED8B /* CharactersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListView.xib; sourceTree = "<group>"; };
+		581B961F2609CFBB0007ED8B /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		76A9C3C124A40FB4001E707F /* HomeSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSceneViewController.xib; sourceTree = "<group>"; };
 		76C7AE362497AD910053EF25 /* CharacterDetailsSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsSceneViewController.swift; sourceTree = "<group>"; };
 		76C7AE372497AD910053EF25 /* CharacterDetailsSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsSceneViewController.xib; sourceTree = "<group>"; };
@@ -248,8 +254,18 @@
 			isa = PBXGroup;
 			children = (
 				581B9611260948870007ED8B /* StringExtension.swift */,
+				580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */,
 			);
 			path = "Foundation Extension";
+			sourceTree = "<group>";
+		};
+		581B96232609CFCD0007ED8B /* Characters List View */ = {
+			isa = PBXGroup;
+			children = (
+				581B961B2609CFA90007ED8B /* CharactersListView.xib */,
+				581B961F2609CFBB0007ED8B /* CharactersListView.swift */,
+			);
+			path = "Characters List View";
 			sourceTree = "<group>";
 		};
 		76A9C3BC24A40C93001E707F /* Modules */ = {
@@ -326,6 +342,7 @@
 		A9F01E9A24E1EF070034ABB9 /* Shared Views */ = {
 			isa = PBXGroup;
 			children = (
+				581B96232609CFCD0007ED8B /* Characters List View */,
 				76C7AE4C249803120053EF25 /* Home Character CollectionViewCell */,
 			);
 			path = "Shared Views";
@@ -461,6 +478,7 @@
 				76C7AE392497AD920053EF25 /* CharacterDetailsSceneViewController.xib in Resources */,
 				01D65F6C249138AD0082F8FF /* LaunchScreen.storyboard in Resources */,
 				76A9C3C224A40FB4001E707F /* HomeSceneViewController.xib in Resources */,
+				581B961C2609CFA90007ED8B /* CharactersListView.xib in Resources */,
 				01D65F69249138AD0082F8FF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +544,7 @@
 				A9F01E9724E1ED9B0034ABB9 /* AppLibraryManager.swift in Sources */,
 				019ACF7C24925D14003E3ECF /* NetworkConstants.swift in Sources */,
 				581B9612260948870007ED8B /* StringExtension.swift in Sources */,
+				580AAD3D2609D5010018C6F8 /* ReusableUIViewExtension.swift in Sources */,
 				76C7AE442497B7370053EF25 /* CharacterDetailsSceneProtocols.swift in Sources */,
 				A9F01E9924E1EE560034ABB9 /* AppWindowManager.swift in Sources */,
 				76C7AE4A2497BBD40053EF25 /* CharacterDetailsScenePresenter.swift in Sources */,
@@ -544,6 +563,7 @@
 				019ACF8C24926E0E003E3ECF /* Encodable+Dictionary.swift in Sources */,
 				01AD2904249571C9006AF9D0 /* HomeSceneInteractor.swift in Sources */,
 				019ACF89249268BA003E3ECF /* CharactersSearch.swift in Sources */,
+				581B96202609CFBB0007ED8B /* CharactersListView.swift in Sources */,
 				019ACF7F24925DFE003E3ECF /* Router.swift in Sources */,
 				01D65F60249138A30082F8FF /* AppDelegate.swift in Sources */,
 				019ACF8E24926F55003E3ECF /* NetworkService.swift in Sources */,
