@@ -31,12 +31,6 @@ class HomeSceneViewController: UIViewController, LoadingViewCapable {
         interactor?.fetchCharacters()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        charactersListView.updateLayout()
-    }
-    
 }
 
 extension HomeSceneViewController: HomeSceneDisplayView {
