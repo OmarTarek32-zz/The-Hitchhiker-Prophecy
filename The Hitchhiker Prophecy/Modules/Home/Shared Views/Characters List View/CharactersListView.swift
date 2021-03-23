@@ -38,7 +38,7 @@ class CharactersListView: UIView, NibLoadable {
     
     private var characters: [HomeScene.Search.ViewModel] = []
         
-    private lazy var currentLayout = Layout.list(frame: frame)
+    private lazy var currentLayout = Layout.list(frame: charactersCollectionView.frame)
     
     // MARK: - Life Cycle Functions
     
@@ -46,9 +46,14 @@ class CharactersListView: UIView, NibLoadable {
         super.init(coder: aDecoder)
         
         loadNibContent()
+        
     }
     
     // MARK: - Functions
+    
+    func updateLayout() {
+        currentLayout.update(frame: charactersCollectionView.frame)
+    }
     
     func configure(_ data: [HomeScene.Search.ViewModel]) {
         characters = data
@@ -101,7 +106,7 @@ extension CharactersListView.Layout {
         case .list(let frame):
             let collectionFlowLayout = UICollectionViewFlowLayout()
             collectionFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-            collectionFlowLayout.itemSize = CGSize(width: frame.width - (frame.width * 0.05), height: 200)
+            collectionFlowLayout.itemSize = CGSize(width: frame.width - max((frame.width * 0.05), 50), height: 200)
             collectionFlowLayout.minimumInteritemSpacing = 10
             collectionFlowLayout.minimumLineSpacing = 10
             collectionFlowLayout.scrollDirection = .vertical
@@ -115,6 +120,15 @@ extension CharactersListView.Layout {
             self = .list(frame: frame)
         case .list(let frame):
             self = .gallery(frame: frame)
+        }
+    }
+    
+    mutating func update(frame: CGRect) {
+        switch self {
+        case .gallery(let frame):
+            self = .gallery(frame: frame)
+        case .list(let frame):
+            self = .list(frame: frame)
         }
     }
 }
