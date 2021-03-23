@@ -12,7 +12,11 @@ class HomeSceneViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var charactersListView: CharactersListView!
+    @IBOutlet private weak var charactersListView: CharactersListView! {
+        didSet {
+            charactersListView.delegate = self
+        }
+    }
     
     // MARK: - Dependencies
     
@@ -38,5 +42,12 @@ extension HomeSceneViewController: HomeSceneDisplayView {
     
     func failedToFetchCharacters(error: Error) {
         // TODO: Implement
+    }
+}
+
+extension HomeSceneViewController: CharactersListViewDelegate {
+    
+    func charactersListView(charactersListView: CharactersListView, didTapOnCharacterWith index: Int) {
+        router?.routeToCharacterDetailsWithCharacter(at: index)
     }
 }
