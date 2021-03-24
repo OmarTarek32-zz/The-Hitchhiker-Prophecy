@@ -36,10 +36,10 @@ class HomeScenePresneter: HomeScenePresentationLogic {
         HomeScene.Search.ViewModel(name: character.name,
                                    desc: character.resultDescription,
                                    imageUrl: constructImageURL(character.thumbnail),
-                                   comics: "",
-                                   series: "",
-                                   stories: "",
-                                   events: "")
+                                   comics: character.comics.collectionURI,
+                                   series: character.series.collectionURI,
+                                   stories: character.stories.collectionURI,
+                                   events: character.events.collectionURI)
     }
     
     func constructImageURL(_ thumbnail: Characters.Search.Character.Thumbnail) -> String {
