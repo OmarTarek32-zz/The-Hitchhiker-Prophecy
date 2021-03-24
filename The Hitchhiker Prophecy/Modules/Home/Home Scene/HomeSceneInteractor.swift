@@ -49,8 +49,9 @@ extension HomeSceneInteractor: HomeSceneBusinessLogic {
             case .failure(let error):
                 print(error)
             }
-            self?.presenter.presentCharacters(result)
             self?.presenter.hideLoadingView()
+            self?.presenter.presentCharacters(result)
+            
         }
     }
 }

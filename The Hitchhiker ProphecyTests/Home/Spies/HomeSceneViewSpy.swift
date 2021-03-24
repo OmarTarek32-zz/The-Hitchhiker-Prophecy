@@ -16,7 +16,7 @@ class HomeSceneViewSpy: HomeSceneDisplayView {
     
     var charactersViewModel: [HomeScene.Search.ViewModel]?
     var error: Error?
-    var isShowingLoadingIndicator = false
+    var isShowingLoadingIndicator: Bool?
     
     func didFetchCharacters(viewModel: [HomeScene.Search.ViewModel]) {
         charactersViewModel = viewModel

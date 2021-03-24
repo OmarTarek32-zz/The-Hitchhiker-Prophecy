@@ -259,12 +259,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		580AC5E4260B3141007E6289 /* Test Data */ = {
+		580AC5E4260B3141007E6289 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
 				580AC5E5260B315E007E6289 /* CharactersTestData.swift */,
 			);
-			path = "Test Data";
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		581B9610260948470007ED8B /* Foundation Extension */ = {
@@ -290,7 +290,7 @@
 		5827F056260B25A900C4E8D4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				580AC5E4260B3141007E6289 /* Test Data */,
+				580AC5E4260B3141007E6289 /* Fakes */,
 				5827F059260B25D900C4E8D4 /* Tests */,
 				5827F058260B25BD00C4E8D4 /* Spies */,
 				5827F057260B25B600C4E8D4 /* Mocks */,

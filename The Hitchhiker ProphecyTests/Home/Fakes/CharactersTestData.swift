@@ -87,6 +87,20 @@ struct CharactersTestData {
                                                               thumbnailExtension: "png")
     }
     
+    static func createCharactersOutput() -> Characters.Search.Output {
+        let results = Characters.Search.Results(offset: 0,
+                                                limit: 20,
+                                                total: 50,
+                                                count: 20,
+                                                results: [createCharacter(), createCharacter()])
+         return Characters.Search.Output(code: 200,
+                                 status: "Success",
+                                 copyright: "Marvel",
+                                 attributionText: "",
+                                 attributionHTML: "",
+                                 etag: "",
+                                 data: results)
+    }
     
     static func createCharacter() -> Characters.Search.Character {
         

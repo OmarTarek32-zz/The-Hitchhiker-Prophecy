@@ -13,7 +13,7 @@ class HomePrsenterTests: XCTestCase {
     
     // This our system under test object
     
-    var homeViewSpy: HomeSceneDisplayView!
+    var homeViewSpy: HomeSceneViewSpy!
     var sut: HomeScenePresneter?
 
     override func setUp() {
@@ -59,5 +59,44 @@ class HomePrsenterTests: XCTestCase {
         let downloadableURL = sut?.constructImageURL(thumbnail)
         // Then
         XCTAssertEqual(downloadableURL, "https://www.photos.marvel/characters/ironman/23434.png")
+    }
+    
+    func test_presentCharacters_withSuccessRespons_countForOutputAndMappedViewModelShouldMatch() {
+        // Given
+        let output = CharactersTestData.createCharactersOutput()
+        // When
+        sut?.presentCharacters(Swift.Result.success(output))
+        // Then
+        XCTAssertEqual(homeViewSpy.charactersViewModel?.count, output.data.results.count)
+    }
+    
+    func test_presentCharacters_withSuccessRespons_viewShouldUpdated() {
+        // Given
+        let output = CharactersTestData.createCharactersOutput()
+        // When
+        sut?.presentCharacters(Swift.Result.success(output))
+        // Then
+        XCTAssertNotNil(homeViewSpy.charactersViewModel)
+    }
+    
+    func test_presentCharacters_withErrorRespons_shouldShowErrorView() {
+        // When
+        sut?.presentCharacters(Swift.Result.failure(.server))
+        // Then
+        XCTAssertNotNil(homeViewSpy.error)
+    }
+    
+    func test_showLoading() {
+        // When
+        sut?.showLoadingView()
+        // Then
+        XCTAssertTrue(homeViewSpy.isShowingLoadingIndicator ?? false)
+    }
+    
+    func test_hideLoading() {
+        // When
+        sut?.hideLoadingView()
+        // Then
+        XCTAssertFalse(homeViewSpy.isShowingLoadingIndicator ?? true)
     }
 }
