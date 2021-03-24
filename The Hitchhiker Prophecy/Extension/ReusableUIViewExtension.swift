@@ -15,6 +15,7 @@ protocol NibNaming {
 
 protocol NibLoadable: NibNaming {
     func loadNibContent()
+    static func instanceFromNib() -> Self
 }
 
 protocol Reuseable: NibNaming {
@@ -40,6 +41,10 @@ extension NibLoadable where Self: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         addSubview(view)
+    }
+    
+    static func instanceFromNib() -> Self {
+        return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! Self
     }
     
     private func loadViewFromNib() -> UIView? {
