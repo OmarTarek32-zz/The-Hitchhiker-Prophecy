@@ -37,6 +37,7 @@ extension HomeSceneInteractor: HomeSceneBusinessLogic {
                                             limit: limit,
                                             orderBy: .modifiedDateDescending)
         
+        self.presenter.showLoadingView()
         worker.getCharacters(input) { [weak self] (result) in
             switch result {
             case .success(let value):
@@ -49,6 +50,7 @@ extension HomeSceneInteractor: HomeSceneBusinessLogic {
                 print(error)
             }
             self?.presenter.presentCharacters(result)
+            self?.presenter.hideLoadingView()
         }
     }
 }

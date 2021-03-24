@@ -27,7 +27,7 @@
 		01D65F64249138A30082F8FF /* HomeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F63249138A30082F8FF /* HomeSceneViewController.swift */; };
 		01D65F69249138AD0082F8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D65F68249138AD0082F8FF /* Assets.xcassets */; };
 		01D65F6C249138AD0082F8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D65F6A249138AD0082F8FF /* LaunchScreen.storyboard */; };
-		01D65F7A24913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F7924913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift */; };
+		01D65F7A24913A160082F8FF /* HomePrsenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F7924913A160082F8FF /* HomePrsenterTests.swift */; };
 		01D65F8224913B760082F8FF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8124913B760082F8FF /* SessionManager.swift */; };
 		01D65F8424913BD40082F8FF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8324913BD40082F8FF /* Request.swift */; };
 		580AAD3D2609D5010018C6F8 /* ReusableUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */; };
@@ -87,7 +87,7 @@
 		01D65F6B249138AD0082F8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01D65F6D249138AD0082F8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D65F7724913A160082F8FF /* The Hitchhiker ProphecyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Hitchhiker ProphecyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01D65F7924913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Hitchhiker_ProphecyTests.swift; sourceTree = "<group>"; };
+		01D65F7924913A160082F8FF /* HomePrsenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrsenterTests.swift; sourceTree = "<group>"; };
 		01D65F7B24913A160082F8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D65F8124913B760082F8FF /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		01D65F8324913BD40082F8FF /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		01D65F7824913A160082F8FF /* The Hitchhiker ProphecyTests */ = {
 			isa = PBXGroup;
 			children = (
-				01D65F7924913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift */,
+				01D65F7924913A160082F8FF /* HomePrsenterTests.swift */,
 				01D65F7B24913A160082F8FF /* Info.plist */,
 			);
 			path = "The Hitchhiker ProphecyTests";
@@ -590,7 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D65F7A24913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift in Sources */,
+				01D65F7A24913A160082F8FF /* HomePrsenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
