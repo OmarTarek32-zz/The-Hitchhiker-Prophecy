@@ -27,16 +27,18 @@
 		01D65F64249138A30082F8FF /* HomeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F63249138A30082F8FF /* HomeSceneViewController.swift */; };
 		01D65F69249138AD0082F8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D65F68249138AD0082F8FF /* Assets.xcassets */; };
 		01D65F6C249138AD0082F8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D65F6A249138AD0082F8FF /* LaunchScreen.storyboard */; };
-		01D65F7A24913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F7924913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift */; };
+		01D65F7A24913A160082F8FF /* HomePrsenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F7924913A160082F8FF /* HomePrsenterTests.swift */; };
 		01D65F8224913B760082F8FF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8124913B760082F8FF /* SessionManager.swift */; };
 		01D65F8424913BD40082F8FF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8324913BD40082F8FF /* Request.swift */; };
 		580AAD3D2609D5010018C6F8 /* ReusableUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */; };
 		580AAD412609E6B50018C6F8 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD402609E6B50018C6F8 /* UICollectionViewExtension.swift */; };
 		580AAD5A260A78A80018C6F8 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7AE4E249803460053EF25 /* CharacterCollectionViewCell.xib */; };
 		580AAD65260AA8F30018C6F8 /* LoadingViewCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AAD64260AA8F20018C6F8 /* LoadingViewCapable.swift */; };
+		580AC5E6260B315E007E6289 /* CharactersTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AC5E5260B315E007E6289 /* CharactersTestData.swift */; };
 		581B9612260948870007ED8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B9611260948870007ED8B /* StringExtension.swift */; };
 		581B961C2609CFA90007ED8B /* CharactersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581B961B2609CFA90007ED8B /* CharactersListView.xib */; };
 		581B96202609CFBB0007ED8B /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B961F2609CFBB0007ED8B /* CharactersListView.swift */; };
+		5827F05B260B267000C4E8D4 /* HomeSceneViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827F05A260B267000C4E8D4 /* HomeSceneViewSpy.swift */; };
 		76A9C3C224A40FB4001E707F /* HomeSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A9C3C124A40FB4001E707F /* HomeSceneViewController.xib */; };
 		76C7AE382497AD910053EF25 /* CharacterDetailsSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7AE362497AD910053EF25 /* CharacterDetailsSceneViewController.swift */; };
 		76C7AE392497AD920053EF25 /* CharacterDetailsSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7AE372497AD910053EF25 /* CharacterDetailsSceneViewController.xib */; };
@@ -87,7 +89,7 @@
 		01D65F6B249138AD0082F8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01D65F6D249138AD0082F8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D65F7724913A160082F8FF /* The Hitchhiker ProphecyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Hitchhiker ProphecyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01D65F7924913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Hitchhiker_ProphecyTests.swift; sourceTree = "<group>"; };
+		01D65F7924913A160082F8FF /* HomePrsenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrsenterTests.swift; sourceTree = "<group>"; };
 		01D65F7B24913A160082F8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D65F8124913B760082F8FF /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		01D65F8324913BD40082F8FF /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -96,9 +98,11 @@
 		580AAD3C2609D5010018C6F8 /* ReusableUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableUIViewExtension.swift; sourceTree = "<group>"; };
 		580AAD402609E6B50018C6F8 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		580AAD64260AA8F20018C6F8 /* LoadingViewCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewCapable.swift; sourceTree = "<group>"; };
+		580AC5E5260B315E007E6289 /* CharactersTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTestData.swift; sourceTree = "<group>"; };
 		581B9611260948870007ED8B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		581B961B2609CFA90007ED8B /* CharactersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListView.xib; sourceTree = "<group>"; };
 		581B961F2609CFBB0007ED8B /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
+		5827F05A260B267000C4E8D4 /* HomeSceneViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneViewSpy.swift; sourceTree = "<group>"; };
 		76A9C3C124A40FB4001E707F /* HomeSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSceneViewController.xib; sourceTree = "<group>"; };
 		76C7AE362497AD910053EF25 /* CharacterDetailsSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsSceneViewController.swift; sourceTree = "<group>"; };
 		76C7AE372497AD910053EF25 /* CharacterDetailsSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsSceneViewController.xib; sourceTree = "<group>"; };
@@ -241,7 +245,7 @@
 		01D65F7824913A160082F8FF /* The Hitchhiker ProphecyTests */ = {
 			isa = PBXGroup;
 			children = (
-				01D65F7924913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift */,
+				5827F056260B25A900C4E8D4 /* Home */,
 				01D65F7B24913A160082F8FF /* Info.plist */,
 			);
 			path = "The Hitchhiker ProphecyTests";
@@ -253,6 +257,14 @@
 				26DE673059370D3D001872E6 /* Pods_The_Hitchhiker_Prophecy.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		580AC5E4260B3141007E6289 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				580AC5E5260B315E007E6289 /* CharactersTestData.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		581B9610260948470007ED8B /* Foundation Extension */ = {
@@ -273,6 +285,40 @@
 				581B961F2609CFBB0007ED8B /* CharactersListView.swift */,
 			);
 			path = "Characters List View";
+			sourceTree = "<group>";
+		};
+		5827F056260B25A900C4E8D4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				580AC5E4260B3141007E6289 /* Fakes */,
+				5827F059260B25D900C4E8D4 /* Tests */,
+				5827F058260B25BD00C4E8D4 /* Spies */,
+				5827F057260B25B600C4E8D4 /* Mocks */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5827F057260B25B600C4E8D4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5827F058260B25BD00C4E8D4 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				5827F05A260B267000C4E8D4 /* HomeSceneViewSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		5827F059260B25D900C4E8D4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				01D65F7924913A160082F8FF /* HomePrsenterTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		76A9C3BC24A40C93001E707F /* Modules */ = {
@@ -590,7 +636,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D65F7A24913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift in Sources */,
+				01D65F7A24913A160082F8FF /* HomePrsenterTests.swift in Sources */,
+				5827F05B260B267000C4E8D4 /* HomeSceneViewSpy.swift in Sources */,
+				580AC5E6260B315E007E6289 /* CharactersTestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -720,7 +768,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

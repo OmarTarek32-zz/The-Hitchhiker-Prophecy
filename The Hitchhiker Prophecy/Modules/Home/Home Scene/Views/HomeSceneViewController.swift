@@ -27,7 +27,6 @@ class HomeSceneViewController: UIViewController, LoadingViewCapable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showLoading()
         interactor?.fetchCharacters()
     }
     
@@ -35,7 +34,6 @@ class HomeSceneViewController: UIViewController, LoadingViewCapable {
 
 extension HomeSceneViewController: HomeSceneDisplayView {
     func didFetchCharacters(viewModel: [HomeScene.Search.ViewModel]) {
-        hideLoading()
         charactersListView.configure(viewModel)
     }
     
