@@ -38,6 +38,7 @@
 		580AC5F2260B4D7B007E6289 /* ErrorDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AC5F1260B4D7B007E6289 /* ErrorDisplaying.swift */; };
 		580AC5F8260B4E0A007E6289 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580AC5F7260B4E0A007E6289 /* ErrorView.xib */; };
 		580AC5FC260B4E1D007E6289 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AC5FB260B4E1D007E6289 /* ErrorView.swift */; };
+		580AC60D260BD8EE007E6289 /* PresentCharacterDetailsAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AC60C260BD8EE007E6289 /* PresentCharacterDetailsAnimationController.swift */; };
 		581B9612260948870007ED8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B9611260948870007ED8B /* StringExtension.swift */; };
 		581B961C2609CFA90007ED8B /* CharactersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581B961B2609CFA90007ED8B /* CharactersListView.xib */; };
 		581B96202609CFBB0007ED8B /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B961F2609CFBB0007ED8B /* CharactersListView.swift */; };
@@ -105,6 +106,7 @@
 		580AC5F1260B4D7B007E6289 /* ErrorDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplaying.swift; sourceTree = "<group>"; };
 		580AC5F7260B4E0A007E6289 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		580AC5FB260B4E1D007E6289 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		580AC60C260BD8EE007E6289 /* PresentCharacterDetailsAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentCharacterDetailsAnimationController.swift; sourceTree = "<group>"; };
 		581B9611260948870007ED8B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		581B961B2609CFA90007ED8B /* CharactersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListView.xib; sourceTree = "<group>"; };
 		581B961F2609CFBB0007ED8B /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		019ACF91249276E7003E3ECF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				580AC60B260BD890007E6289 /* Animation Controller */,
 				A9F01E9B24E1EF200034ABB9 /* Worker */,
 				A9F01E9A24E1EF070034ABB9 /* Shared Views */,
 				A9F01E9C24E1EFAB0034ABB9 /* Home Scene */,
@@ -298,6 +301,14 @@
 				580AAD64260AA8F20018C6F8 /* LoadingViewCapable.swift */,
 			);
 			path = "Loading View";
+			sourceTree = "<group>";
+		};
+		580AC60B260BD890007E6289 /* Animation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				580AC60C260BD8EE007E6289 /* PresentCharacterDetailsAnimationController.swift */,
+			);
+			path = "Animation Controller";
 			sourceTree = "<group>";
 		};
 		581B9610260948470007ED8B /* Extension */ = {
@@ -643,6 +654,7 @@
 				019ACF9524927760003E3ECF /* HomeScene.swift in Sources */,
 				019ACF7824925B32003E3ECF /* NetworkError.swift in Sources */,
 				01AD2906249577B9006AF9D0 /* HomeScenePresenter.swift in Sources */,
+				580AC60D260BD8EE007E6289 /* PresentCharacterDetailsAnimationController.swift in Sources */,
 				019ACF9024926F7F003E3ECF /* CharactersNetworkService.swift in Sources */,
 				76C7AE382497AD910053EF25 /* CharacterDetailsSceneViewController.swift in Sources */,
 				017EC1D32496484A00CB124A /* HomeSceneConfigurator.swift in Sources */,

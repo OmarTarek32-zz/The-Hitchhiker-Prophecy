@@ -10,7 +10,7 @@ import UIKit
 
 final class HomeSceneRouter: HomeSceneDataPassing {
     // MARK: - Stored properties
-    weak var viewController: (HomeSceneDisplayView & UIViewController)?
+    weak var viewController: (HomeSceneDisplayView & UIViewController & UIViewControllerTransitioningDelegate)?
     var dataStore: HomeSceneDataStore?
 }
 
@@ -19,6 +19,7 @@ extension HomeSceneRouter: HomeSceneRoutingLogic {
     func routeToCharacterDetailsWithCharacter(at index: Int) {
         guard let character = dataStore?.result?.results[index] else { return }
         let characterDetailsViewController = CharacterDetailsSceneConfigurator.configure(with: character)
+        characterDetailsViewController.transitioningDelegate = viewController
         viewController?.present(characterDetailsViewController, animated: true)
     }
 }
