@@ -33,6 +33,4 @@ class HomeSceneViewSpy: HomeSceneDisplayView {
     func hideLoading() {
         isShowingLoadingIndicator = false
     }
-    
-    
 }
