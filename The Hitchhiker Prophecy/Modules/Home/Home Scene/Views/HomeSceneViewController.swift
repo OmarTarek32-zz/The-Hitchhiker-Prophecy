@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeSceneViewController: UIViewController, LoadingViewCapable {
+class HomeSceneViewController: UIViewController, LoadingViewCapable, ErrorDisplaying {
     
     // MARK: - IBOutlets
     
@@ -38,7 +38,11 @@ extension HomeSceneViewController: HomeSceneDisplayView {
     }
     
     func failedToFetchCharacters(error: Error) {
-        // TODO: Implement
+        showErrorView(error)
+    }
+    
+    func retry() {
+        interactor?.fetchCharacters()
     }
 }
 
