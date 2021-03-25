@@ -43,6 +43,7 @@
 		581B961C2609CFA90007ED8B /* CharactersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581B961B2609CFA90007ED8B /* CharactersListView.xib */; };
 		581B96202609CFBB0007ED8B /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B961F2609CFBB0007ED8B /* CharactersListView.swift */; };
 		5827F05B260B267000C4E8D4 /* HomeSceneViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827F05A260B267000C4E8D4 /* HomeSceneViewSpy.swift */; };
+		5860C208260C076B006A47EE /* DismissCharacterDetailsAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860C207260C076B006A47EE /* DismissCharacterDetailsAnimationController.swift */; };
 		76A9C3C224A40FB4001E707F /* HomeSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A9C3C124A40FB4001E707F /* HomeSceneViewController.xib */; };
 		76C7AE382497AD910053EF25 /* CharacterDetailsSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7AE362497AD910053EF25 /* CharacterDetailsSceneViewController.swift */; };
 		76C7AE392497AD920053EF25 /* CharacterDetailsSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7AE372497AD910053EF25 /* CharacterDetailsSceneViewController.xib */; };
@@ -111,6 +112,7 @@
 		581B961B2609CFA90007ED8B /* CharactersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListView.xib; sourceTree = "<group>"; };
 		581B961F2609CFBB0007ED8B /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		5827F05A260B267000C4E8D4 /* HomeSceneViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneViewSpy.swift; sourceTree = "<group>"; };
+		5860C207260C076B006A47EE /* DismissCharacterDetailsAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissCharacterDetailsAnimationController.swift; sourceTree = "<group>"; };
 		76A9C3C124A40FB4001E707F /* HomeSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSceneViewController.xib; sourceTree = "<group>"; };
 		76C7AE362497AD910053EF25 /* CharacterDetailsSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsSceneViewController.swift; sourceTree = "<group>"; };
 		76C7AE372497AD910053EF25 /* CharacterDetailsSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsSceneViewController.xib; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				580AC60C260BD8EE007E6289 /* PresentCharacterDetailsAnimationController.swift */,
+				5860C207260C076B006A47EE /* DismissCharacterDetailsAnimationController.swift */,
 			);
 			path = "Animation Controller";
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				017EC1D32496484A00CB124A /* HomeSceneConfigurator.swift in Sources */,
 				019ACF93249276FC003E3ECF /* HomeWorker.swift in Sources */,
 				019ACF8124925E15003E3ECF /* CharacterRouter.swift in Sources */,
+				5860C208260C076B006A47EE /* DismissCharacterDetailsAnimationController.swift in Sources */,
 				580AC5FC260B4E1D007E6289 /* ErrorView.swift in Sources */,
 				580AC5F2260B4D7B007E6289 /* ErrorDisplaying.swift in Sources */,
 				76C7AE3F2497AFBE0053EF25 /* HomeSceneRouter.swift in Sources */,

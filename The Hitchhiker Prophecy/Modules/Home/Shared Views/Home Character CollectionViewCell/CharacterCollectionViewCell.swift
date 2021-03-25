@@ -11,8 +11,8 @@ import UIKit
 class CharacterCollectionViewCell: UICollectionViewCell, Reuseable {
     // MARK: - Outlets
 
-    @IBOutlet var characterNameLabel: UILabel!
-    @IBOutlet var characterImageView: UIImageView!
+    @IBOutlet private var characterNameLabel: UILabel!
+    @IBOutlet private(set) var characterImageView: UIImageView!
     
     // MARK: - Life Cycle
     

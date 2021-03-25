@@ -22,6 +22,11 @@ class CharacterDetailsSceneViewController: UIViewController {
         super.viewDidLoad()
         interactor?.fetchCharacter()
     }
+    
+    @IBAction func closeTapGestureTapped(_ sender: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - CharacterDetailsSceneDisplayView Methods

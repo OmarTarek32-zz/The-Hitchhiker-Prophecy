@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,29 +22,44 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jdp-yT-HW1">
-                    <rect key="frame" x="0.0" y="36" width="414" height="591.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="591.5"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e54-0T-eAR">
-                    <rect key="frame" x="174" y="562" width="66.5" height="33.5"/>
+                    <rect key="frame" x="174" y="526" width="66.5" height="33.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQC-3T-fBH">
-                    <rect key="frame" x="16" y="643.5" width="382" height="20.5"/>
+                    <rect key="frame" x="16" y="607.5" width="382" height="20.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="yZ7-2q-BMP">
+                    <rect key="frame" x="20" y="44" width="30" height="30"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="O2b-gZ-Jj3"/>
+                        <constraint firstAttribute="width" constant="30" id="xbv-r6-hoN"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="KVS-9e-MGr" appends="YES" id="3hg-8O-vGE"/>
+                    </connections>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
             <constraints>
+                <constraint firstItem="yZ7-2q-BMP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1Z1-Q2-cEJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SQC-3T-fBH" secondAttribute="trailing" constant="16" id="3pR-PO-Ynu"/>
-                <constraint firstItem="Jdp-yT-HW1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-8" id="4I1-7M-sDi"/>
+                <constraint firstItem="Jdp-yT-HW1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4I1-7M-sDi"/>
                 <constraint firstItem="e54-0T-eAR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9cV-PV-Pfb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SQC-3T-fBH" secondAttribute="bottom" constant="16" id="HNg-IH-CuI"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SQC-3T-fBH" secondAttribute="bottom" id="HNg-IH-CuI"/>
                 <constraint firstItem="SQC-3T-fBH" firstAttribute="top" secondItem="Jdp-yT-HW1" secondAttribute="bottom" constant="16" id="Hdm-Ka-wzz"/>
                 <constraint firstItem="e54-0T-eAR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I7y-ES-t5Q"/>
+                <constraint firstItem="yZ7-2q-BMP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IwZ-mu-I7q"/>
                 <constraint firstItem="SQC-3T-fBH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="J3t-bG-Z8s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e54-0T-eAR" secondAttribute="trailing" constant="16" id="U5g-Pz-7vk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jdp-yT-HW1" secondAttribute="trailing" id="aY3-nP-g0d"/>
@@ -51,8 +67,18 @@
                 <constraint firstItem="Jdp-yT-HW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="flN-GU-okh"/>
                 <constraint firstItem="e54-0T-eAR" firstAttribute="bottom" secondItem="Jdp-yT-HW1" secondAttribute="bottom" constant="-32" id="ix3-SC-HM4"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="151"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
         </view>
+        <tapGestureRecognizer id="KVS-9e-MGr">
+            <connections>
+                <action selector="closeTapGestureTapped:" destination="-1" id="zj9-hV-5mD"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="close" width="512" height="512"/>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

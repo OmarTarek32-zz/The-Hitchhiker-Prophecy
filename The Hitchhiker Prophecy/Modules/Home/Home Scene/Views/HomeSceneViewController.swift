@@ -18,6 +18,10 @@ class HomeSceneViewController: UIViewController, LoadingViewCapable, ErrorDispla
         }
     }
     
+    // MARK: - Properties
+    
+    private(set) weak var selectedCell: CharacterCollectionViewCell?
+    
     // MARK: - Dependencies
     
     var interactor: HomeSceneBusinessLogic?
@@ -29,7 +33,6 @@ class HomeSceneViewController: UIViewController, LoadingViewCapable, ErrorDispla
         super.viewDidLoad()
         interactor?.fetchCharacters()
     }
-    
 }
 
 extension HomeSceneViewController: HomeSceneDisplayView {
@@ -47,8 +50,8 @@ extension HomeSceneViewController: HomeSceneDisplayView {
 }
 
 extension HomeSceneViewController: CharactersListViewDelegate {
-    
-    func charactersListView(charactersListView: CharactersListView, didTapOnCharacterWith index: Int) {
+    func charactersListView(charactersListView: CharactersListView, didTapOnCharacterWith index: Int, for cell: CharacterCollectionViewCell?) {
+        selectedCell = cell
         router?.routeToCharacterDetailsWithCharacter(at: index)
     }
 }
@@ -56,10 +59,21 @@ extension HomeSceneViewController: CharactersListViewDelegate {
 extension HomeSceneViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        guard let sourceViewController = (presenting as? UINavigationController)?.viewControllers.first as? HomeSceneViewController,
+              let destinationViewController = presented as? CharacterDetailsSceneViewController,
+              let selectedCell = selectedCell?.characterImageView else { return nil }
+
+        return PresentCharacterDetailsAnimationController(sourceViewController: sourceViewController,
+                                                          destinationViewController: destinationViewController,
+                                                          selectedCellImageViewSnapshot: selectedCell)
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        
+        guard let destinationViewController = dismissed as? CharacterDetailsSceneViewController,
+              let selectedCell = selectedCell?.characterImageView else { return nil }
+        return DismissCharacterDetailsAnimationController(sourceViewController: self,
+                                                          destinationViewController: destinationViewController,
+                                                          selectedCellImageViewSnapshot: selectedCell)
     }
 }

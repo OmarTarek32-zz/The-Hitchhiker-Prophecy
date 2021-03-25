@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CharactersListViewDelegate: AnyObject {
-    func charactersListView(charactersListView: CharactersListView, didTapOnCharacterWith index: Int)
+    func charactersListView(charactersListView: CharactersListView, didTapOnCharacterWith index: Int, for cell: CharacterCollectionViewCell?)
 }
 
 class CharactersListView: UIView, NibLoadable {
@@ -22,8 +22,9 @@ class CharactersListView: UIView, NibLoadable {
     }
     
     // MARK: - IBOutlets
-    @IBOutlet weak var changeLayoutButton: UIButton!
-    @IBOutlet weak var charactersCollectionView: UICollectionView! {
+    
+    @IBOutlet private weak var changeLayoutButton: UIButton!
+    @IBOutlet private(set) weak var charactersCollectionView: UICollectionView! {
         didSet{
             charactersCollectionView.delegate = self
             charactersCollectionView.dataSource = self
@@ -35,9 +36,7 @@ class CharactersListView: UIView, NibLoadable {
     // MARK: - Properties
     
     weak var delegate: CharactersListViewDelegate?
-    
     private var characters: [HomeScene.Search.ViewModel] = []
-        
     private var currentLayout = Layout.list
     
     // MARK: - Life Cycle Functions
@@ -65,10 +64,14 @@ class CharactersListView: UIView, NibLoadable {
         charactersCollectionView.finishInteractiveTransition()
     }
     
-    @IBAction func changeLayoutButtonTapped(_ sender: UIButton) {
+    // MARK: - Actions
+    
+    @IBAction private func changeLayoutButtonTapped(_ sender: UIButton) {
         switchLayout()
     }
 }
+
+// MARK: - Extensions
 
 extension CharactersListView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -82,7 +85,7 @@ extension CharactersListView: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.charactersListView(charactersListView: self, didTapOnCharacterWith: indexPath.row)
+        delegate?.charactersListView(charactersListView: self, didTapOnCharacterWith: indexPath.row, for: collectionView.cellForItem(at: indexPath) as? CharacterCollectionViewCell)
     }
 }
 
