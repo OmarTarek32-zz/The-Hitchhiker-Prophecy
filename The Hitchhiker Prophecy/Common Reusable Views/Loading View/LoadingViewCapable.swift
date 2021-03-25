@@ -40,6 +40,7 @@ class LoadingView: UIView {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.tintColor = .white
         activityIndicator.color = .white
+        activityIndicator.accessibilityIdentifier = "home_activityIndicator"
         return activityIndicator
     }()
     

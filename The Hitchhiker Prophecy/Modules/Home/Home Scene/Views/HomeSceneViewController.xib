@@ -21,6 +21,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrT-ZB-anV" customClass="CharactersListView" customModule="The_Hitchhiker_Prophecy" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="p9K-a1-ut4"/>

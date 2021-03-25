@@ -19,6 +19,11 @@ class CharacterCollectionViewCell: UICollectionViewCell, Reuseable {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        setupTheme()
+        isAccessibilityElement = true
+    }
+    
+    func setupTheme() {
         characterImageView.layer.cornerRadius = 8
         characterImageView.clipsToBounds = true
     }

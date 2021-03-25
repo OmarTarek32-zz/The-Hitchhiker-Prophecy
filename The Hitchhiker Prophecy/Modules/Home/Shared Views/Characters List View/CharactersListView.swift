@@ -29,6 +29,8 @@ class CharactersListView: UIView, NibLoadable {
             charactersCollectionView.dataSource = self
             charactersCollectionView.collectionViewLayout = currentLayout.collectionViewFlowLayout
             charactersCollectionView.registerCell(withCellType: CharacterCollectionViewCell.self)
+            charactersCollectionView.isAccessibilityElement = true
+            charactersCollectionView.accessibilityIdentifier = "home_list_view"
         }
     }
     
