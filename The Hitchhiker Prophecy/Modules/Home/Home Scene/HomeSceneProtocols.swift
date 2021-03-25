@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol HomeSceneDisplayView: class {
+protocol HomeSceneDisplayView: class, LoadingViewCapable {
     var interactor: HomeSceneBusinessLogic? { get }
     var router: HomeSceneRoutingLogic? { get }
     
@@ -27,6 +27,8 @@ protocol HomeScenePresentationLogic: class {
     var displayView: HomeSceneDisplayView? { get }
     
     func presentCharacters(_ response: HomeScene.Search.Response)
+    func showLoadingView()
+    func hideLoadingView()
 }
 
 protocol HomeSceneDataStore: class {
